@@ -1,0 +1,163 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Robonto Condense', sans-serif;
+    font-weight: 500;
+}
+
+/* ////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////// */
+
+h1 {
+    font-size: 2.25;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.small {
+    font-size: 80%;
+    text-align: center;
+}
+
+.split-screen {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    height: 200px;
+}
+
+.left, .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    background-image: linear-gradient(rgba(29, 29, 29, 0.7), rgba(18, 19, 24, 0.7)), url(../media/img/logintemp.jpg);
+    background-size: cover;
+}
+
+.left .content {
+    color: white;
+    text-align: left;
+}
+
+.left p {
+    font-weight: 400;
+}
+
+.right .content {
+    color: black;
+    text-align: center;
+}
+
+.right .content p {
+    margin: 1.5em 0;
+    font-size: 0.875rem;
+}
+
+.right form {
+    width: 328px;
+}
+
+.input-field{
+    position: relative;
+    margin-top: 10px;
+}
+
+.input-field input{
+    width: 90%;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 0 15px;
+    border: 2px solid rgb(218,220,224);
+    background: transparent;
+    color: #333;
+    outline: none;
+}
+
+.input-field label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: rgb(95,99,104);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-field label:where(.dob-white) {
+    color: transparent;
+}
+
+input:focus{
+    border: 2px solid rgb(26,115,232);
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: 0;
+    left: 15px;
+    font-size: 1rem;
+    padding: 0 2px;
+    color: #333;
+    background: rgb(255, 255, 255);
+}
+
+.signup-btn {
+    display: block;
+    width: 100%;
+    background: blue;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.signup-btn:hover {
+    background: #2c4893;
+    cursor: pointer;
+}
+
+.home-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+
+@media screen and (min-width: 450px) {
+    .split-screen {
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .left, 
+    .right {
+        display: flex;
+        width: 50%;
+        height: auto;
+    }
+}

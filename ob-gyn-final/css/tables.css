@@ -1,0 +1,153 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+thead {
+    text-align: left;
+}
+
+thead th:first-child {
+    border-radius: 4px 0 0 0;
+}
+    
+thead th:last-child {
+    border-radius: 0 4px 0 0;
+}
+
+thead th {
+    padding: 8px;
+}
+
+thead th + th {
+    border-left: 1px solid #DDDDDD;
+}
+
+tbody tr:nth-of-type(odd) {
+    background: #F9F9F9;
+}
+
+tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 4px;
+}
+
+tbody tr:last-child td:last-child {
+    border-radius: 0 0 4px 0;
+}
+
+tbody tr td {
+    padding: 8px;
+    border-top: 1px solid #DDDDDD;
+}
+
+tbody tr td + td {
+    border-left: 1px solid #DDDDDD;
+}
+
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    
+    
+    
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    
+    table {
+        border: none;
+    }
+    
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead { 
+        display: none;
+    }
+    
+    tbody tr {
+        border: 1px solid #DDDDDD;
+        border-radius: 5px;
+    }
+    
+    tbody tr + tr {
+        margin-top: 10px;
+    }
+    
+    tbody tr td {
+        border: none;
+    }
+    
+    tbody tr td + td {
+        border-top: 1px solid #DDDDDD;
+        border-left: none;
+    }
+    
+    tbody tr td:before {
+        font-weight: bold;
+        float: left;
+        width: 30%;
+        content: attr(data-head);
+    }
+    
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    
+    table {
+        border: none;
+    }
+    
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead { 
+        display: none;
+    }
+    
+    tbody tr {
+        border: 1px solid #DDDDDD;
+        border-radius: 5px;
+    }
+    
+    tbody tr + tr {
+        margin-top: 10px;
+    }
+    
+    tbody tr td {
+        border: none;
+    }
+    
+    tbody tr td + td {
+        border-top: 1px solid #DDDDDD;
+        border-left: none;
+    }
+    
+    tbody tr td:before {
+       font-size: 0.7em;
+       font-weight: bold;
+       display: block;
+       content: attr(data-head);
+    }
+    
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    
+    
+    
+}
